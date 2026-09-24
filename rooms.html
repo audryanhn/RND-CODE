@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/Logo.png" />
+  </head>
+
+  <body>
+    <nav class="mainNav">
+      <div class="nav-inner">
+        <a href="index.html" target="_self" class="logo"
+          >The <span>Grand</span></a
+        >
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="rooms.html">ROOMS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT </a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- ===== ROOMS PAGE ===== -->
+    <div class="page" id="page-rooms">
+      <div class="page-hero" style="padding-top: 72px">
+        <div class="hero-grid-pattern"></div>
+        <div class="page-hero-content">
+          <div class="section-eyebrow" style="color: var(--gold)" id="rp-tag">
+            Accommodations
+          </div>
+          <h1 id="rp-title">Rooms & Suites</h1>
+        </div>
+      </div>
+      <div class="rooms-list" id="rooms-list">
+        <div class="room-list-card">
+          <div class="room-list-img">
+            <img
+              src="assets/Deluxe.jpeg"
+              height="100%"
+              width="100%"
+              alt="Deluxe City View"
+            />
+            >
+          </div>
+          <div class="room-list-body">
+            <div>
+              <h3>Deluxe City View</h3>
+              <p>
+                A spacious retreat with panoramic city vistas and refined
+                contemporary interiors.
+              </p>
+              <div class="room-specs">
+                <div class="spec-item">
+                  <div class="spec-val">52</div>
+                  <div class="spec-label">sqm</div>
+                </div>
+                <div class="spec-item">
+                  <div class="spec-val">2</div>
+                  <div class="spec-label">Guests</div>
+                </div>
+                <div class="spec-item">
+                  <div class="spec-val">32F</div>
+                  <div class="spec-label">Floor</div>
+                </div>
+              </div>
+            </div>
+            <div class="room-list-footer">
+              <div class="room-price">
+                <span class="from">From</span>
+                <span class="amount">Rp 1.8 Jt</span>
+                <span class="night"> / night</span>
+              </div>
+              <!-- room=0 points to rooms[0] in script.js. -->
+              <a class="btn-gold room-details-link" href="details.html?room=0">
+                View Detail
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-top">
+        <div>
+          <span class="footer-logo">The<span>Grand</span></span>
+          <p class="footer-brand-text">
+            A world-class luxury hotel in the heart of Jakarta. Where every stay
+            becomes an unforgettable memory.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Hotel</h4>
+          <ul>
+            <li>
+              <a href="rooms.html">Rooms & Suites</a>
+            </li>
+            <li><a href="#">Dining</a></li>
+            <li><a href="#">Spa & Wellness</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Promotions</a></li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Cancellation Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 The Grand Hotel. All rights reserved.</span
+        ><span>Jakarta, Indonesia</span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
