@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Explore room details, amenities, and rates at The Grand Hotel Jakarta."
+      content="Discover the Deluxe City View room at The Grand Hotel Jakarta, with skyline views, a king bed, and refined modern comforts."
     />
-    <title>Room Details | The Grand</title>
+    <title>Room Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap"
       rel="stylesheet"
@@ -16,113 +18,139 @@
     <link rel="icon" href="assets/Logo.png" />
   </head>
 
-  <body class="room-detail-page">
-    <nav class="mainNav">
-      <div class="nav-inner">
-        <a href="index.html" class="logo">The <span>Grand</span></a>
-        <ul class="nav-links">
-          <li><a href="index.html">HOME</a></li>
-          <li><a class="active" href="rooms.html">ROOMS</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- JavaScript clones this template, then replaces its placeholder data. -->
-    <template id="room-detail-template">
-      <section class="detail-hero">
-        <img data-room-image="main" src="" alt="" />
+  <body class="room-detail-page" id="page-details">
+    <main>
+      <section class="detail-hero" aria-labelledby="room-title">
+        <img src="assets/Deluxe.jpeg" alt="Deluxe City View" id="detail-img" />
         <div class="detail-hero-overlay"></div>
         <div class="detail-hero-content">
-          <a class="detail-back" href="rooms.html" aria-label="Back to all rooms">
-            <span aria-hidden="true">&#8592;</span> Back to rooms
+          <a class="detail-back" href="rooms.html">
+            <span aria-hidden="true">&#8592;</span> Back to all rooms
           </a>
-          <p class="detail-eyebrow" data-room-text="type">Room type</p>
-          <h1 data-room-text="name">Room name</h1>
-          <p class="detail-tagline" data-room-text="tagline">Room tagline</p>
+          <!-- <p class="detail-eyebrow">Deluxe Collection &nbsp;·&nbsp; Jakarta</p> -->
+          <h1 id="room-title">Deluxe City View</h1>
+          <!-- <p class="detail-tagline">
+            Wake above the city. Stay wrapped in quiet luxury.
+          </p> -->
+        </div>
+        <div class="detail-scroll-cue" aria-hidden="true">
+          <span>Discover</span>
+          <i></i>
         </div>
       </section>
 
-      <section class="detail-overview">
+      <section class="detail-overview" aria-labelledby="overview-title">
         <div class="detail-copy">
           <p class="section-label-gold">The room</p>
-          <h2 data-room-text="overviewTitle">Room overview title</h2>
-          <p data-room-text="longDescription">Room description</p>
+          <h2 id="overview-title">Deluxe City View</h2>
+          <p id="detail-description">
+            A spacious retreat with panoramic city vistas and refined
+            contemporary interiors.
+          </p>
 
           <div class="detail-facts" aria-label="Room specifications">
             <div class="detail-fact">
-              <span class="detail-fact-value" data-room-text="size">0</span>
+              <span class="detail-fact-value" id="detail-size">52</span>
               <span class="detail-fact-label">Square metres</span>
             </div>
             <div class="detail-fact">
-              <span class="detail-fact-value" data-room-text="guests">0</span>
+              <span class="detail-fact-value" id="detail-guest">2</span>
               <span class="detail-fact-label">Guests</span>
             </div>
             <div class="detail-fact">
-              <span class="detail-fact-value" data-room-text="bed">Bed type</span>
-              <span class="detail-fact-label">Bed</span>
-            </div>
-            <div class="detail-fact">
-              <span class="detail-fact-value" data-room-text="floor">Floor</span>
+              <span class="detail-fact-value" id="detail-floor">32F</span>
               <span class="detail-fact-label">Floor</span>
             </div>
           </div>
         </div>
 
-        <aside class="detail-rate-card">
-          <p class="detail-rate-label">Nightly rate from</p>
-          <p class="detail-rate" data-room-text="priceLabel">Room price</p>
-          <p class="detail-rate-note">Taxes and service charges may apply.</p>
-          <a class="btn-gold detail-reserve" data-room-link="reservation" href="contact.html">
+        <aside class="detail-rate-card" aria-label="Room rate and reservation">
+          <p class="detail-rate-label">Rates from</p>
+          <p class="detail-rate">Rp 1.8 Jt</p>
+          <p class="detail-rate-note">Per room, per night. Taxes may apply.</p>
+          <a
+            class="btn-gold detail-reserve"
+            href="contact.html?room=deluxe-city-view"
+          >
             Reserve this room
           </a>
-          <a class="detail-contact-link" href="contact.html">Ask us a question</a>
+          <a class="detail-contact-link" href="contact.html">
+            Ask our concierge
+          </a>
+          <div class="detail-rate-perks">
+            <span>Best rate guarantee</span>
+            <span>Flexible cancellation</span>
+            <span>Complimentary breakfast</span>
+          </div>
         </aside>
       </section>
 
-      <section class="detail-amenities">
+      <section class="detail-amenities" aria-labelledby="amenities-title">
         <div class="detail-section-heading">
           <div>
             <p class="section-label-gold">Included in your stay</p>
-            <h2>Room amenities</h2>
+            <h2 id="amenities-title">Thoughtful comforts.</h2>
           </div>
-          <p>Everything you need, quietly considered.</p>
+          <p>
+            Everything you need to slow down, settle in, and feel completely at
+            home.
+          </p>
         </div>
-        <div class="amenities-grid" data-room-list="amenities"></div>
+
+        <div class="amenities-grid">
+          <div class="amenity-card">
+            <span class="amenity-number">01</span>
+            <p class="detail-amenity">King-size bed</p>
+          </div>
+          <div class="amenity-card">
+            <span class="amenity-number">02</span>
+            <p class="detail-amenity">Panoramic city view</p>
+          </div>
+          <div class="amenity-card">
+            <span class="amenity-number">03</span>
+            <p class="detail-amenity">Marble bathroom</p>
+          </div>
+          <div class="amenity-card">
+            <span class="amenity-number">04</span>
+            <p class="detail-amenity">High-speed Wi-Fi</p>
+          </div>
+        </div>
       </section>
 
-      <section class="detail-gallery" data-room-label="gallery">
+      <!-- <section class="detail-stay-note" aria-label="Room experience">
+        <div class="detail-stay-image">
+          <img
+            src="assets/exp-1.jpg"
+            alt="King bed prepared with premium linens"
+          />
+        </div>
+        <div class="detail-stay-copy">
+          <p class="section-label-gold">A better night</p>
+          <blockquote>
+            “The city stays close, while the world feels wonderfully far away.”
+          </blockquote>
+          <p>
+            From crisp linens to blackout drapes and a pillow menu, every detail
+            is composed for deep, uninterrupted rest.
+          </p>
+        </div>
+      </section> -->
+
+      <section class="detail-gallery" aria-label="Deluxe room gallery">
         <div class="detail-gallery-main">
-          <img data-room-image="main" src="" alt="" />
+          <img
+            src="assets/Deluxe.jpeg"
+            alt="Panoramic Jakarta skyline from the Deluxe City View room"
+          />
         </div>
         <div class="detail-gallery-item">
-          <img data-room-image="gallery-0" src="" alt="" />
+          <img src="assets/exp-1.jpg" alt="Deluxe room king bed and linens" />
         </div>
         <div class="detail-gallery-item">
-          <img data-room-image="gallery-1" src="" alt="" />
+          <img src="assets/exp-2.jpg" alt="The Grand Hotel indoor pool" />
         </div>
       </section>
-
-      <section class="detail-cta">
-        <p class="section-label-gold">Your stay awaits</p>
-        <h2>Make yourself at home at The Grand.</h2>
-        <a class="btn-gold" data-room-link="reservation" href="contact.html">
-          Reserve your stay
-        </a>
-      </section>
-    </template>
-
-    <!-- This smaller template is cloned once for each amenity in the array. -->
-    <template id="amenity-template">
-      <div class="amenity-card">
-        <span class="amenity-number" data-amenity-number>00</span>
-        <span data-amenity-name>Amenity name</span>
-      </div>
-    </template>
-
-    <!-- The completed clone of room-detail-template is inserted here. -->
-    <main id="room-detail"></main>
+    </main>
 
     <footer>
       <div class="footer-top">
@@ -162,11 +190,10 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2025 The Grand Hotel. All rights reserved.</span>
+        <span>&copy; 2026 The Grand Hotel. All rights reserved.</span>
         <span>Jakarta, Indonesia</span>
       </div>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>
