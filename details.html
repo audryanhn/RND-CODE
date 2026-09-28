@@ -18,7 +18,7 @@
     <link rel="icon" href="assets/Logo.png" />
   </head>
 
-  <body class="room-detail-page" id="page-details">
+  <body class="room-detail-page">
     <main>
       <section class="detail-hero" aria-labelledby="room-title">
         <img src="assets/Deluxe.jpeg" alt="Deluxe City View" id="detail-img" />
@@ -27,11 +27,7 @@
           <a class="detail-back" href="rooms.html">
             <span aria-hidden="true">&#8592;</span> Back to all rooms
           </a>
-          <!-- <p class="detail-eyebrow">Deluxe Collection &nbsp;·&nbsp; Jakarta</p> -->
           <h1 id="room-title">Deluxe City View</h1>
-          <!-- <p class="detail-tagline">
-            Wake above the city. Stay wrapped in quiet luxury.
-          </p> -->
         </div>
         <div class="detail-scroll-cue" aria-hidden="true">
           <span>Discover</span>
@@ -42,23 +38,31 @@
       <section class="detail-overview" aria-labelledby="overview-title">
         <div class="detail-copy">
           <p class="section-label-gold">The room</p>
-          <h2 id="overview-title">Deluxe City View</h2>
-          <p id="detail-description">
-            A spacious retreat with panoramic city vistas and refined
-            contemporary interiors.
+          <h2 id="overview-title">Your private view over Jakarta.</h2>
+          <p>
+            Our Deluxe City View is a 52-square-metre retreat designed around
+            the skyline. Floor-to-ceiling windows fill the room with natural
+            light, while warm timber, soft textiles, and considered details
+            create a calm counterpoint to the city below. Settle into a king
+            bed, unwind in the marble bathroom, and watch Jakarta glow after
+            dark from the comfort of your own sanctuary.
           </p>
 
           <div class="detail-facts" aria-label="Room specifications">
             <div class="detail-fact">
-              <span class="detail-fact-value" id="detail-size">52</span>
+              <span class="detail-fact-value">52</span>
               <span class="detail-fact-label">Square metres</span>
             </div>
             <div class="detail-fact">
-              <span class="detail-fact-value" id="detail-guest">2</span>
+              <span class="detail-fact-value">2</span>
               <span class="detail-fact-label">Guests</span>
             </div>
             <div class="detail-fact">
-              <span class="detail-fact-value" id="detail-floor">32F</span>
+              <span class="detail-fact-value">King</span>
+              <span class="detail-fact-label">Bed</span>
+            </div>
+            <div class="detail-fact">
+              <span class="detail-fact-value">32F</span>
               <span class="detail-fact-label">Floor</span>
             </div>
           </div>
@@ -100,41 +104,30 @@
         <div class="amenities-grid">
           <div class="amenity-card">
             <span class="amenity-number">01</span>
-            <p class="detail-amenity">King-size bed</p>
+            <div>
+              <strong>King-size bed</strong>
+            </div>
           </div>
           <div class="amenity-card">
             <span class="amenity-number">02</span>
-            <p class="detail-amenity">Panoramic city view</p>
+            <div>
+              <strong>Panoramic city view</strong>
+            </div>
           </div>
           <div class="amenity-card">
             <span class="amenity-number">03</span>
-            <p class="detail-amenity">Marble bathroom</p>
+            <div>
+              <strong>Marble bathroom</strong>
+            </div>
           </div>
           <div class="amenity-card">
             <span class="amenity-number">04</span>
-            <p class="detail-amenity">High-speed Wi-Fi</p>
+            <div>
+              <strong>High-speed Wi-Fi</strong>
+            </div>
           </div>
         </div>
       </section>
-
-      <!-- <section class="detail-stay-note" aria-label="Room experience">
-        <div class="detail-stay-image">
-          <img
-            src="assets/exp-1.jpg"
-            alt="King bed prepared with premium linens"
-          />
-        </div>
-        <div class="detail-stay-copy">
-          <p class="section-label-gold">A better night</p>
-          <blockquote>
-            “The city stays close, while the world feels wonderfully far away.”
-          </blockquote>
-          <p>
-            From crisp linens to blackout drapes and a pillow menu, every detail
-            is composed for deep, uninterrupted rest.
-          </p>
-        </div>
-      </section> -->
 
       <section class="detail-gallery" aria-label="Deluxe room gallery">
         <div class="detail-gallery-main">
@@ -149,6 +142,17 @@
         <div class="detail-gallery-item">
           <img src="assets/exp-2.jpg" alt="The Grand Hotel indoor pool" />
         </div>
+      </section>
+
+      <section class="detail-cta">
+        <p class="section-label-gold">Your stay awaits</p>
+        <h2>Meet Jakarta from a different point of view.</h2>
+        <p class="detail-cta-copy">
+          Deluxe City View · From Rp 1.8 Jt per night
+        </p>
+        <a class="btn-gold" href="contact.html?room=deluxe-city-view">
+          Reserve your stay
+        </a>
       </section>
     </main>
 
@@ -194,6 +198,5 @@
         <span>Jakarta, Indonesia</span>
       </div>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>

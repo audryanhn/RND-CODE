@@ -1,6 +1,5 @@
 const rooms = [
   {
-    id: 0,
     name: "Deluxe City View",
     type: "Deluxe",
 
@@ -19,8 +18,6 @@ const rooms = [
     amenities: ["King Bed", "Bathtub", "Wi-Fi", "City View"],
   },
   {
-    id: 1,
-
     name: "Executive Suite",
     type: "Executive",
 
@@ -44,8 +41,6 @@ const rooms = [
     ],
   },
   {
-    id: 2,
-
     name: "Presidential Suite",
     type: "Presidential",
 
@@ -84,61 +79,42 @@ function createRoomCard(room) {
   </div>
   <div class="room-list-body">
     <div>
-      <h3>${room.name}</h3>
-     
-      
+      <h3>Deluxe City View Room</h3>
+      <p>
+        ${room.description}
+      </p>
+      <div class="room-specs">
+        <div class="spec-item">
+          <div class="spec-val">${room.size}</div>
+          <div class="spec-label">sqm</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-val">${room.guests}</div>
+          <div class="spec-label">Guests</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-val">${room.floor}</div>
+          <div class="spec-label">Floor</div>
+        </div>
+      </div>
     </div>
     <div class="room-list-footer">
-      
-      <a class="btn-gold" data-id="${room.id}" >
+      <div class="room-price">
+        <span class="from">From</span
+        ><span class="amount">${room.priceLabel}</span
+        ><span class="night"> / night</span>
+      </div>
+      <button class="btn-gold" onclick="location.href = 'contact.html'">
         View Detail
-      </a>
+      </button>
     </div>
   </div>
 `;
   return roomCard;
 }
 
-// CEK APAKAH DI PAGE ROOM
-const isRoom = document.getElementById("page-rooms");
-if (isRoom) {
-  for (let i = 1; i < rooms.length; i++) {
-    const roomsList = document.querySelector("#rooms-list");
-    const roomCard = createRoomCard(rooms[i]);
-    roomsList.appendChild(roomCard);
-  }
-}
-
-// EVENT LISTENER BUTTON
-const buttons = document.querySelectorAll(".btn-gold");
-
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    let roomId = button.dataset.id;
-    console.log(roomId);
-    sessionStorage.setItem("room-data", roomId);
-    window.location.href = "details.html";
-  });
-});
-
-const isDetail = document.getElementById("page-details");
-
-if (isDetail) {
-  const roomData = sessionStorage.getItem("room-data");
-  const room = rooms[roomData];
-
-  console.log(room);
-
-  document.getElementById("detail-img").src = room.image;
-  document.getElementById("room-title").textContent = room.name;
-  document.getElementById("overview-title").textContent = room.name;
-  document.getElementById("detail-description").textContent = room.description;
-  document.getElementById("detail-size").textContent = room.size;
-  document.getElementById("detail-guest").textContent = room.guests;
-  document.getElementById("detail-floor").textContent = room.floor;
-
-  for (let i = 0; i < room.amenities.length; i++) {
-    document.getElementsByClassName("detail-amenity")[i].textContent =
-      room.amenities[i];
-  }
+for (let i = 1; i < rooms.length; i++) {
+  const roomsList = document.querySelector("#rooms-list");
+  const roomCard = createRoomCard(rooms[i]);
+  roomsList.appendChild(roomCard);
 }
