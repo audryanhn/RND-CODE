@@ -15,19 +15,9 @@ const rooms = [
     amenities: ["King Bed", "Bathtub", "Wi-Fi", "City View"],
 
     detail: {
-      // metaDescription:
-      //   "Discover the Deluxe City View room at The Grand Hotel Jakarta, with skyline views, a king bed, and refined modern comforts.",
-      // heroAlt: "Deluxe City View",
       title: "Your private view over Jakarta.",
       description:
         "Our Deluxe City View is a 52-square-metre retreat designed around the skyline. Floor-to-ceiling windows fill the room with natural light, while warm timber, soft textiles, and considered details create a calm counterpoint to the city below. Settle into a king bed, unwind in the marble bathroom, and watch Jakarta glow after dark from the comfort of your own sanctuary.",
-      // rateNote: "Per room, per night. Taxes may apply.",
-      // reservationUrl: "contact.html?room=deluxe-city-view",
-      // perks: [
-      //   "Best rate guarantee",
-      //   "Flexible cancellation",
-      //   "Complimentary breakfast",
-      // ],
       amenities: [
         { title: "King-size bed", description: "Premium linens and pillows" },
         {
@@ -75,19 +65,9 @@ const rooms = [
     ],
 
     detail: {
-      // metaDescription:
-      //   "Experience the Executive Suite at The Grand Hotel Jakarta, featuring a refined living space, private bar, and exclusive lounge access.",
-      // heroAlt: "Executive Suite",
       title: "More room to settle into the city.",
       description:
         "Designed for guests who appreciate space and privacy, the Executive Suite offers a separate living room, an elegant bedroom, and a private bar for relaxed evenings in. High above Jakarta, the suite creates a calm place to work, entertain, or simply enjoy a slower stay.",
-      // rateNote: "Per suite, per night. Taxes may apply.",
-      // reservationUrl: "contact.html?room=executive-suite",
-      // perks: [
-      //   "Executive lounge access",
-      //   "Flexible cancellation",
-      //   "Complimentary breakfast",
-      // ],
       amenities: [
         {
           title: "Separate living area",
@@ -138,19 +118,9 @@ const rooms = [
     ],
 
     detail: {
-      // metaDescription:
-      //   "Stay in the Presidential Suite at The Grand Hotel Jakarta, featuring private entertainment spaces, two bedrooms, and exceptional service.",
-      // heroAlt: "Presidential Suite",
       title: "The city’s most private address.",
       description:
         "The Presidential Suite is an expansive private residence above Jakarta. With two elegant bedrooms, a private cinema, dedicated dining room, and rooftop pool access, every detail is designed for exceptional stays, intimate celebrations, and effortless entertaining.",
-      // rateNote: "Per suite, per night. Taxes may apply.",
-      // reservationUrl: "contact.html?room=presidential-suite",
-      // perks: [
-      //   "Dedicated butler service",
-      //   "Flexible cancellation",
-      //   "Complimentary breakfast",
-      // ],
       amenities: [
         {
           title: "Two private bedrooms",
