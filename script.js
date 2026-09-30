@@ -197,7 +197,7 @@ function createRoomCard(room) {
         ><span class="amount">${room.priceLabel}</span
         ><span class="night"> / night</span>
       </div>
-      <button class="btn-gold" onclick="location.href = 'contact.html'">
+      <button class="btn-gold" onclick="location.href = 'details.html'">
         View Detail
       </button>
     </div>

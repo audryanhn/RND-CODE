@@ -411,18 +411,6 @@ body {
 
 
 
-.room-badge {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: var(--gold);
-  color: #fff;
-  font-size: 0.65rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 5px 12px;
-}
-
 .room-body {
   padding: 1.5rem;
 }
@@ -850,7 +838,7 @@ div.exp-img-label {
   color: #fff;
 }
 
-.rooms-list {
+#rooms-list {
   padding: 60px 5%;
   display: flex;
   flex-direction: column;
