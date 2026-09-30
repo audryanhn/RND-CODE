@@ -871,10 +871,7 @@ div.exp-img-label {
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
 }
 
-.room-list-img {
-  /* height: 280px; */
-  background-size: cover;
-}
+
 
 .room-num {
   position: absolute;
