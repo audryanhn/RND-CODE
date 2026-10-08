@@ -1,3 +1,5 @@
+// ===== The Grand Hotel =====
+
 const rooms = [
   {
     id: "deluxe-city-view",
@@ -8,11 +10,13 @@ const rooms = [
     price: 1800000,
     priceLabel: "Rp 1.8 Jt",
     size: 52,
-    guests: 2,
     bed: "King",
+    guests: 2,
     floor: "32F",
     image: "assets/Deluxe.jpeg",
     amenities: ["King Bed", "Bathtub", "Wi-Fi", "City View"],
+
+    // =============== Add More Data Below ==================
 
     detail: {
       title: "Your private view over Jakarta.",
@@ -27,21 +31,6 @@ const rooms = [
         { title: "Marble bathroom", description: "Bathtub and rain shower" },
         { title: "High-speed Wi-Fi", description: "Complimentary access" },
       ],
-      gallery: [
-        {
-          image: "assets/Deluxe.jpeg",
-          alt: "Panoramic Jakarta skyline from the Deluxe City View room",
-        },
-        {
-          image: "assets/exp-1.jpg",
-          alt: "Deluxe room king bed and linens",
-        },
-        {
-          image: "assets/exp-2.jpg",
-          alt: "The Grand Hotel indoor pool",
-        },
-      ],
-      ctaTitle: "Meet Jakarta from a different point of view.",
     },
   },
   {
@@ -53,8 +42,8 @@ const rooms = [
     price: 3500000,
     priceLabel: "Rp 3.5 Jt",
     size: 90,
-    guests: 2,
     bed: "King",
+    guests: 2,
     floor: "38F",
     image: "assets/Executive.jpeg",
     amenities: [
@@ -63,23 +52,10 @@ const rooms = [
       "Soaking Tub",
       "Executive Lounge",
     ],
-
     detail: {
       title: "More room to settle into the city.",
       description:
         "Designed for guests who appreciate space and privacy, the Executive Suite offers a separate living room, an elegant bedroom, and a private bar for relaxed evenings in. High above Jakarta, the suite creates a calm place to work, entertain, or simply enjoy a slower stay.",
-      amenities: [
-        {
-          title: "Separate living area",
-          description: "Space to relax or host",
-        },
-        {
-          title: "Private bar",
-          description: "Curated drinks and refreshments",
-        },
-        { title: "Soaking tub", description: "Marble bathroom sanctuary" },
-        { title: "Executive lounge", description: "Exclusive daily access" },
-      ],
       gallery: [
         {
           image: "assets/Executive.jpeg",
@@ -106,8 +82,8 @@ const rooms = [
     price: 8000000,
     priceLabel: "Rp 8 Jt",
     size: 240,
+    bed: "Two King",
     guests: 4,
-    bed: "Two King Beds",
     floor: "42F",
     image: "assets/Presidential.jpeg",
     amenities: [
@@ -116,29 +92,10 @@ const rooms = [
       "Dining Room",
       "Rooftop Pool",
     ],
-
     detail: {
       title: "The city’s most private address.",
       description:
         "The Presidential Suite is an expansive private residence above Jakarta. With two elegant bedrooms, a private cinema, dedicated dining room, and rooftop pool access, every detail is designed for exceptional stays, intimate celebrations, and effortless entertaining.",
-      amenities: [
-        {
-          title: "Two private bedrooms",
-          description: "Space for up to four guests",
-        },
-        {
-          title: "Private cinema",
-          description: "Your personal entertainment room",
-        },
-        {
-          title: "Formal dining room",
-          description: "Designed for private occasions",
-        },
-        {
-          title: "Rooftop pool access",
-          description: "Exclusive skyline relaxation",
-        },
-      ],
       gallery: [
         {
           image: "assets/Presidential.jpeg",
@@ -158,56 +115,128 @@ const rooms = [
   },
 ];
 
+// Practice penerapan object pada console
+// function showRoomInfo(name, price, size, guests) {
+//   console.log("Room: " + name);
+//   console.log("Price: " + price + " per night");
+//   console.log("Size: " + size + " sqm");
+//   console.log("Guests: " + guests);
+// }
+
+// function calculateStay(price, nights) {
+//   return price * nights;
+// }
+
+// rooms.forEach((room) => {
+//   showRoomInfo(room.name, room.priceLabel, room.size, room.guests);
+//   console.log("");
+// });
+
 function createRoomCard(room) {
   const roomCard = document.createElement("div");
   roomCard.className = "room-list-card";
-  roomCard.innerHTML = `
-  <div class="room-list-img">
-    <img
-      src="${room.image}"
-      height="100%"
-      width="100%"
-      alt="${room.name}"
-    />
-  </div>
-  <div class="room-list-body">
-    <div>
-      <h3>Deluxe City View Room</h3>
-      <p>
-        ${room.description}
-      </p>
-      <div class="room-specs">
-        <div class="spec-item">
-          <div class="spec-val">${room.size}</div>
-          <div class="spec-label">sqm</div>
-        </div>
-        <div class="spec-item">
-          <div class="spec-val">${room.guests}</div>
-          <div class="spec-label">Guests</div>
-        </div>
-        <div class="spec-item">
-          <div class="spec-val">${room.floor}</div>
-          <div class="spec-label">Floor</div>
-        </div>
+  roomCard.innerHTML = `<div class="room-list-img">
+  <img
+    src="${room.image}"
+    height="100%"
+    width="100%"
+    alt="${room.name}"
+  />
+</div>
+
+<div class="room-list-body">
+  <div>
+    <h3>${room.name}</h3>
+    <p>${room.description}</p>
+
+    <div class="room-specs">
+      <div class="spec-item">
+        <div class="spec-val">${room.size}</div>
+        <div class="spec-label">sqm</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-val">${room.guests}</div>
+        <div class="spec-label">Guests</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-val">${room.floor}</div>
+        <div class="spec-label">Floor</div>
       </div>
     </div>
-    <div class="room-list-footer">
-      <div class="room-price">
-        <span class="from">From</span
-        ><span class="amount">${room.priceLabel}</span
-        ><span class="night"> / night</span>
-      </div>
-      <button class="btn-gold" onclick="location.href = 'details.html'">
-        View Detail
-      </button>
-    </div>
+</div>
+
+<div class="room-list-footer">
+  <div class="room-price">
+    <span class="from">From</span>
+    <span class="amount">${room.priceLabel}</span>
+    <span class="night"> / night</span>
   </div>
-`;
+  <a class="btn-gold" data-id=${room.id}>
+    View Detail
+  </a>
+</div>
+</div>`;
+
   return roomCard;
 }
 
-for (let i = 1; i < rooms.length; i++) {
-  const roomsList = document.querySelector("#rooms-list");
-  const roomCard = createRoomCard(rooms[i]);
-  roomsList.appendChild(roomCard);
+const isRoom = document.getElementById("rooms-page");
+if (isRoom != null) {
+  for (let i = 1; i < rooms.length; i++) {
+    const roomsList = document.querySelector("#rooms-list");
+    const roomCard = createRoomCard(rooms[i]);
+    roomsList.appendChild(roomCard);
+  }
+}
+
+const buttons = document.querySelectorAll(".btn-gold");
+// console.log(buttons); // Comment this code
+
+buttons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    const roomId = button.dataset.id;
+    sessionStorage.setItem("roomId", roomId);
+    window.location.href = "details.html";
+  });
+});
+
+const isDetail = document.getElementById("details-page");
+if (isDetail != null) {
+  const roomId = sessionStorage.getItem("roomId");
+
+  rooms.forEach((room) => {
+    if (room.id == roomId) {
+      // console.log(room);
+      // Add Code Below
+      document.getElementById("detail-img").src = room.image;
+      document.getElementById("room-title").textContent = room.name;
+      // Add Code Below
+      document.getElementById("overview-title").textContent = room.name;
+      document.getElementById("detail-description").textContent =
+        room.detail.description;
+      // Add Code Below
+      document.getElementById("detail-size").textContent = room.size;
+      document.getElementById("detail-guests").textContent = room.guests;
+      document.getElementById("detail-bed").textContent = room.bed;
+      // Add Code Below
+      document.getElementById("detail-floor").textContent = room.floor;
+      document.getElementById("detail-price-label").textContent =
+        room.priceLabel;
+      // Add Code Below
+      for (let i = 0; i < room.amenities.length; i++) {
+        document.getElementsByClassName("detail-amenity")[i].textContent =
+          room.amenities[i];
+      }
+      // Add Code Below
+      for (let i = 0; i < room.detail.gallery.length; i++) {
+        document.querySelectorAll(".detail-gallery img")[i].src =
+          room.detail.gallery[i].image;
+        document.querySelectorAll(".detail-gallery img")[i].alt =
+          room.detail.gallery[i].alt;
+      }
+      // Add Code Below
+      document.querySelector(".detail-cta h2").textContent =
+        room.detail.ctaTitle;
+    }
+  });
 }

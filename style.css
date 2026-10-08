@@ -295,34 +295,37 @@ body {
 
 .intro p {
   color: var(--muted);
-  font-size: 0.97rem;
+  font-size: 16px;
   line-height: 1.85;
   font-weight: 300;
 }
 
 /* filter btn css */
-.room-filter-btns {
-  display: flex;
-  gap: 0.5rem;
+/* .room-filter-btns {
+ display: flex;
+ gap: 8px;
 }
 
+
 .filter-btn {
-  padding: 0.4rem 1rem;
-  border: 1px solid var(--gold);
-  background: transparent;
-  color: var(--gold);
-  font-family: inherit;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
+ padding: 6px 16px;
+ border: 1px solid var(--gold);
+ background: transparent;
+ color: var(--gold);
+ font-size: 13px;
+ letter-spacing: 1px;
+ cursor: pointer;
+ transition: background 0.3s, color 0.3s;
 }
+
 
 .filter-btn:hover,
 .filter-btn.active {
-  background: var(--gold);
-  color: white;
-}
+ background: var(--gold);
+ color: white;
+} */
+
+
 
 /* filter btn css end */
 
@@ -390,7 +393,7 @@ body {
 .room-img-inner {
   /* height: 100%; */
   min-width: 100%;
-  background: linear-gradient(135deg, var(--navy) 0%, #2a3a4a 100%);
+  /* background: linear-gradient(135deg, var(--navy) 0%, #2a3a4a 100%); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -441,10 +444,13 @@ body {
 .amenity {
   font-size: 0.72rem;
   letter-spacing: 1px;
-  color: var(--muted);
+  color: var(--white);
   display: flex;
   align-items: center;
   gap: 4px;
+  background-color: var(--gold);
+  padding: 6px;
+  border-radius: 16px;
 }
 
 .room-footer {
