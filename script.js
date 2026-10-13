@@ -240,3 +240,64 @@ if (isDetail != null) {
     }
   });
 }
+
+const isHome = document.getElementById("home-page");
+if (isHome !== null) {
+  // ============== Start of Old Way=================
+  // const filterContainer = document.querySelector(".room-filter-btns");
+  // filterContainer.addEventListener("click", (event) => {
+  //   if (event.target.classList.contains("filter-btn") === false) {
+  //     return;
+  //   }
+  //   const filterButtons = document.querySelectorAll(".filter-btn");
+  //   filterButtons.forEach((button) => {
+  //     button.classList.remove("active");
+  //   });
+  //   event.target.classList.add("active");
+  // });
+  // ============== End of Old Way=================
+  // ============== Start of New Way=================
+  const filterbuttons = document.querySelectorAll(".filter-btn");
+  filterbuttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      filterbuttons.forEach((button) => {
+        button.classList.remove("active");
+      });
+
+      button.classList.add("active");
+
+      const room = button.dataset.room;
+      let roomId = 0;
+
+      // jangan lupa pake console.log biar lebih terstruktur
+      // console.log(room)
+      switch (room) {
+        case "deluxe":
+          roomId = 0;
+          break;
+        case "executive":
+          roomId = 1;
+          break;
+        case "presidential":
+          roomId = 2;
+          break;
+      }
+      const roomData = rooms[roomId];
+      const roomPhoto = document.getElementById("room-photo");
+      const roomName = document.getElementById("room-name");
+      const roomDescription = document.getElementById("room-desc");
+      const roomAmenities = document.querySelectorAll(".amenity");
+      const roomPrice = document.getElementById("room-price");
+
+      roomPhoto.src = roomData.image;
+      roomName.textContent = roomData.name;
+      roomDescription.textContent = roomData.description;
+      roomAmenities.forEach((amenity, index) => {
+        amenity.textContent = roomData.amenities[index];
+      });
+      roomPrice.textContent = roomData.priceLabel;
+    });
+  });
+
+  // ============== End of New Way=================
+}
