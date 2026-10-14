@@ -490,6 +490,43 @@ body {
   background: var(--gold);
   color: #fff;
 }
+/* ============== Start of Table ================= */
+.room-table {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+}
+
+.room-table th {
+  background-color: var(--navy);
+  color: var(--white);
+  padding: 14px 20px;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+}
+
+.room-table td {
+  padding: 12px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.room-table thead th:first-child,
+.room-table tbody td:first-child {
+  text-align: left;
+  color: var(white);
+}
+
+.room-table tr:nth-child(even) {
+  background-color: var(--gold-light);
+}
+
+/* ============== End of Table ================= */
 
 /* EXPERIENCE */
 .experience {

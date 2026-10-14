@@ -301,3 +301,31 @@ if (isHome !== null) {
 
   // ============== End of New Way=================
 }
+
+const fasilitas = [
+  ["Harga/malam", "1.800.000", "3.200.000", "7.500.000"],
+  ["Luas Ruangan", "42m<sup>2</sup>", "78m<sup>2</sup>", "185m<sup>2</sup>"],
+  ["Tipe Kamar", "King Bed", "King Bed", "Two King Bed"],
+  ["Pemandangan", "City View", "City & Pool", "Panoramic"],
+  ["Kapasitas", "2 Tamu", "2 Tamu", "4 Tamu"],
+  ["Butler Service", "-", "-", "&#10003"],
+];
+
+let headerHTML = "<tr><th>Fasilitas</th>";
+for (let i = 0; i < rooms.length; i++) {
+  headerHTML += "<th>" + rooms[i].name + "</th>";
+}
+document.getElementById("tableHead").innerHTML = headerHTML + "</tr>";
+
+// Build body — nested loop
+let bodyHTML = "";
+for (let i = 0; i < fasilitas.length; i++) {
+  // outer: baris (fitur)
+  bodyHTML += "<tr><td>" + fasilitas[i][0] + "</td>";
+  for (let j = 0; j < fasilitas[i].length - 1; j++) {
+    // inner: kolom (tipe kamar)
+    bodyHTML += "<td>" + fasilitas[i][j + 1] + "</td>";
+  }
+  bodyHTML += "</tr>";
+}
+document.getElementById("tableBody").innerHTML = bodyHTML;
