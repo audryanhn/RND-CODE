@@ -491,9 +491,10 @@ body {
   color: #fff;
 }
 
+/* ============== Start of Table New Way ================= */
 .room-table {
   width: 60%;
-  margin: 0 auto;
+  margin: 50px auto;
   margin-bottom: 100px;
   border-collapse: collapse;
   font-size: 0.9rem;
@@ -511,7 +512,7 @@ body {
 
 .room-table td {
   padding: 12px 20px;
-  text-align: center;
+  text-align: left;
   border-bottom: 1px solid var(--border);
   color: var(--text);
 }
@@ -525,6 +526,7 @@ body {
 .room-table tr:nth-child(even) {
   background-color: var(--gold-light);
 }
+/* ============== End of Table New Way ================= */
 
 /* EXPERIENCE */
 .experience {

@@ -300,47 +300,36 @@ if (isHome !== null) {
   });
 
   // ============== End of New Way=================
-
-  const tipeKamar = [
-    "Deluxe City View",
-    "Executive Suite",
-    "Presidential Suite",
-  ];
-
-  const fiturKamar = [
-    {
-      label: "Harga / Malam",
-      nilai: ["Rp 1.800.000", "Rp 3.200.000", "Rp 7.500.000"],
-    },
-    { label: "Luas Ruangan", nilai: ["42 m²", "78 m²", "185 m²"] },
-    {
-      label: "Tipe Kasur",
-      nilai: ["King Bed", "King Bed", "Twin King Bed"],
-    },
-    {
-      label: "Pemandangan",
-      nilai: ["City View", "City & Pool", "Panoramic"],
-    },
-    { label: "Kapasitas", nilai: ["2 Tamu", "2 Tamu", "4 Tamu"] },
-    { label: "Butler Service", nilai: ["—", "—", "✓"] },
-  ];
-
-  let headerHTML = "<tr><th>Fasilitas</th>";
-  for (let i = 0; i < tipeKamar.length; i++) {
-    headerHTML += "<th>" + tipeKamar[i] + "</th>";
-  }
-  document.getElementById("tableHead").innerHTML = headerHTML + "</tr>";
-
-  // Build body — nested loop
-  let bodyHTML = "";
-  for (let i = 0; i < fiturKamar.length; i++) {
-    // outer: baris (fitur)
-    bodyHTML += "<tr><td>" + fiturKamar[i].label + "</td>";
-    for (let j = 0; j < tipeKamar.length; j++) {
-      // inner: kolom (tipe kamar)
-      bodyHTML += "<td>" + fiturKamar[i].nilai[j] + "</td>";
-    }
-    bodyHTML += "</tr>";
-  }
-  document.getElementById("tableBody").innerHTML = bodyHTML;
 }
+
+// ============== Start of Table New Way =================
+const tableHead = document.querySelector("#tableHead");
+const tableBody = document.querySelector("#tableBody");
+let amenitiesHTML = "";
+let tableBodyHTML = "";
+
+tableHead.innerHTML = `<tr>
+            <th>Rooms</th>
+            <th>Price / Night</th>
+            <th>Amenities</th>
+          </tr>`;
+
+for (let i = 0; i < rooms.length; i++) {
+  const room = rooms[i];
+
+  for (let j = 0; j < room.amenities.length; j++) {
+    amenitiesHTML += `<li>${room.amenities[j]}</li>`;
+  }
+
+  tableBodyHTML += `
+    <tr>
+      <td>${room.name}</td>
+      <td>Rp ${room.price.toLocaleString("id-ID")}</td>
+      <td><ul>${amenitiesHTML}</ul></td>
+    </tr>
+  `;
+  amenitiesHTML = "";
+}
+tableBody.innerHTML = tableBodyHTML;
+
+// ============== End of Table New Way =================
