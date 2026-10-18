@@ -507,8 +507,8 @@ body {
   color: var(--white);
   padding: 14px 20px;
   font-weight: normal;
-  letter-spacing: 0.08em;
   text-align: left;
+  letter-spacing: 0.08em;
 }
 
 .room-table td {

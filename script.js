@@ -305,8 +305,6 @@ if (isHome !== null) {
 // ============== Start of Table New Way =================
 const tableHead = document.querySelector("#tableHead");
 const tableBody = document.querySelector("#tableBody");
-let amenitiesHTML = "";
-let tableBodyHTML = "";
 
 tableHead.innerHTML = `<tr>
             <th>Rooms</th>
@@ -317,19 +315,18 @@ tableHead.innerHTML = `<tr>
 for (let i = 0; i < rooms.length; i++) {
   const room = rooms[i];
 
+  let amenitiesHTML = "";
   for (let j = 0; j < room.amenities.length; j++) {
     amenitiesHTML += `<li>${room.amenities[j]}</li>`;
   }
 
-  tableBodyHTML += `
+  tableBody.innerHTML += `
     <tr>
       <td>${room.name}</td>
       <td>Rp ${room.price.toLocaleString("id-ID")}</td>
       <td><ul>${amenitiesHTML}</ul></td>
     </tr>
   `;
-  amenitiesHTML = "";
 }
-tableBody.innerHTML = tableBodyHTML;
 
 // ============== End of Table New Way =================
