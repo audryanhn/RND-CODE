@@ -70,41 +70,70 @@
         </div>
         <div class="contact-right">
           <h3>Reservation Enquiry</h3>
-          <div class="form-row">
-            <div class="form-group">
-              <label>First Name</label><input type="text" placeholder="John" />
+          <form id="enquiry-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label><input type="text" placeholder="John" />
+              </div>
+              <div class="form-group">
+                <label>Last Name</label><input type="text" placeholder="Smith" />
+              </div>
             </div>
             <div class="form-group">
-              <label>Last Name</label><input type="text" placeholder="Smith" />
+              <label>Email Address</label
+              ><input
+                id="enquiry-email"
+                type="email"
+                placeholder="john@email.com"
+                required
+              />
             </div>
-          </div>
-          <div class="form-group">
-            <label>Email Address</label
-            ><input type="email" placeholder="john@email.com" />
-          </div>
-          <div class="form-row">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Check-in Date</label><input type="date" />
+              </div>
+              <div class="form-group">
+                <label>Check-out Date</label><input type="date" />
+              </div>
+            </div>
             <div class="form-group">
-              <label>Check-in Date</label><input type="date" />
+              <label>Room Type</label
+              ><select>
+                <option>Deluxe City View</option>
+                <option>Executive Suite</option>
+                <option>Presidential Suite</option>
+              </select>
             </div>
             <div class="form-group">
-              <label>Check-out Date</label><input type="date" />
+              <label>Special Requests</label
+              ><textarea
+                placeholder="Let us know how we can make your stay extraordinary..."
+              ></textarea>
             </div>
-          </div>
-          <div class="form-group">
-            <label>Room Type</label
-            ><select>
-              <option>Deluxe City View</option>
-              <option>Executive Suite</option>
-              <option>Presidential Suite</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Special Requests</label
-            ><textarea
-              placeholder="Let us know how we can make your stay extraordinary..."
-            ></textarea>
-          </div>
-          <button class="form-submit">Send Enquiry</button>
+            <button class="form-submit" type="submit">Send Enquiry</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Simple confirmation modal for this front-end example. -->
+      <div
+        class="enquiry-modal"
+        id="enquiry-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="enquiry-modal-title"
+        hidden
+      >
+        <div class="enquiry-modal__content">
+          <p class="enquiry-modal__eyebrow">Enquiry sent</p>
+          <h3 id="enquiry-modal-title">Thank you for contacting us.</h3>
+          <p>
+            A confirmation email has been sent to
+            <strong id="enquiry-modal-email"></strong>.
+          </p>
+          <button class="form-submit" id="enquiry-modal-close" type="button">
+            Close
+          </button>
         </div>
       </div>
       <footer>

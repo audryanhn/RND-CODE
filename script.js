@@ -306,27 +306,71 @@ if (isHome !== null) {
 const tableHead = document.querySelector("#tableHead");
 const tableBody = document.querySelector("#tableBody");
 
-tableHead.innerHTML = `<tr>
+if (tableHead !== null && tableBody !== null) {
+  tableHead.innerHTML = `<tr>
             <th>Rooms</th>
             <th>Price / Night</th>
             <th>Amenities</th>
           </tr>`;
 
-for (let i = 0; i < rooms.length; i++) {
-  const room = rooms[i];
+  for (let i = 0; i < rooms.length; i++) {
+    const room = rooms[i];
 
-  let amenitiesHTML = "";
-  for (let j = 0; j < room.amenities.length; j++) {
-    amenitiesHTML += `<li>${room.amenities[j]}</li>`;
-  }
+    let amenitiesHTML = "";
+    for (let j = 0; j < room.amenities.length; j++) {
+      amenitiesHTML += `<li>${room.amenities[j]}</li>`;
+    }
 
-  tableBody.innerHTML += `
+    tableBody.innerHTML += `
     <tr>
       <td>${room.name}</td>
       <td>Rp ${room.price.toLocaleString("id-ID")}</td>
       <td><ul>${amenitiesHTML}</ul></td>
     </tr>
   `;
+  }
 }
 
 // ============== End of Table New Way =================
+
+// ===== Contact form: front-end confirmation example =====
+const enquiryForm = document.querySelector("#enquiry-form");
+
+if (enquiryForm !== null) {
+  const emailInput = document.querySelector("#enquiry-email");
+  const enquiryModal = document.querySelector("#enquiry-modal");
+  const modalEmail = document.querySelector("#enquiry-modal-email");
+  const closeModalButton = document.querySelector("#enquiry-modal-close");
+
+  const closeEnquiryModal = () => {
+    enquiryModal.hidden = true;
+  };
+
+  enquiryForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!emailInput.checkValidity()) {
+      emailInput.reportValidity();
+      return;
+    }
+
+    // textContent keeps the email safe to display in the modal.
+    modalEmail.textContent = emailInput.value.trim();
+    enquiryModal.hidden = false;
+    closeModalButton.focus();
+  });
+
+  closeModalButton.addEventListener("click", closeEnquiryModal);
+
+  enquiryModal.addEventListener("click", (event) => {
+    if (event.target === enquiryModal) {
+      closeEnquiryModal();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !enquiryModal.hidden) {
+      closeEnquiryModal();
+    }
+  });
+}
