@@ -70,13 +70,20 @@
         </div>
         <div class="contact-right">
           <h3>Reservation Enquiry</h3>
-          <form id="enquiry-form">
+          <form
+            id="enquiry-form"
+            action="https://formsubmit.co/67c5abc30493bff8e935a810f7d56c6c"
+            method="POST"
+            target="_blank"
+          >
             <div class="form-row">
               <div class="form-group">
-                <label>First Name</label><input type="text" placeholder="John" />
+                <label>First Name</label
+                ><input type="text" placeholder="John" name="name" />
               </div>
               <div class="form-group">
-                <label>Last Name</label><input type="text" placeholder="Smith" />
+                <label>Last Name</label
+                ><input type="text" placeholder="Smith" />
               </div>
             </div>
             <div class="form-group">
@@ -86,19 +93,22 @@
                 type="email"
                 placeholder="john@email.com"
                 required
+                name="email"
               />
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label>Check-in Date</label><input type="date" />
+                <label>Check-in Date</label
+                ><input type="date" name="check-in-date" />
               </div>
               <div class="form-group">
-                <label>Check-out Date</label><input type="date" />
+                <label>Check-out Date</label
+                ><input type="date" name="check-out-date" />
               </div>
             </div>
             <div class="form-group">
               <label>Room Type</label
-              ><select>
+              ><select name="Room-Type">
                 <option>Deluxe City View</option>
                 <option>Executive Suite</option>
                 <option>Presidential Suite</option>
@@ -107,9 +117,12 @@
             <div class="form-group">
               <label>Special Requests</label
               ><textarea
+                name="special_request"
                 placeholder="Let us know how we can make your stay extraordinary..."
               ></textarea>
             </div>
+            <input type="hidden" name="_captcha" value="false" />
+            <!-- <input type="hidden" name="_next" class="next" /> -->
             <button class="form-submit" type="submit">Send Enquiry</button>
           </form>
         </div>
@@ -117,25 +130,23 @@
 
       <!-- Simple confirmation modal for this front-end example. -->
       <div
-        class="enquiry-modal"
+        class="enquiry-modal hidden"
         id="enquiry-modal"
         role="dialog"
         aria-modal="true"
         aria-labelledby="enquiry-modal-title"
         hidden
       >
-        <div class="enquiry-modal__content">
-          <p class="enquiry-modal__eyebrow">Enquiry sent</p>
+        <div class="enquiry-modal-content">
+          <p class="enquiry-modal-eyebrow">Enquiry sent</p>
           <h3 id="enquiry-modal-title">Thank you for contacting us.</h3>
-          <p>
-            A confirmation email has been sent to
-            <strong id="enquiry-modal-email"></strong>.
-          </p>
+          <p>We will reach you soon!</p>
           <button class="form-submit" id="enquiry-modal-close" type="button">
             Close
           </button>
         </div>
       </div>
+
       <footer>
         <div class="footer-top">
           <div>

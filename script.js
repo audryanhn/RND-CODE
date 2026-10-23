@@ -337,40 +337,28 @@ if (tableHead !== null && tableBody !== null) {
 const enquiryForm = document.querySelector("#enquiry-form");
 
 if (enquiryForm !== null) {
-  const emailInput = document.querySelector("#enquiry-email");
   const enquiryModal = document.querySelector("#enquiry-modal");
-  const modalEmail = document.querySelector("#enquiry-modal-email");
   const closeModalButton = document.querySelector("#enquiry-modal-close");
 
   const closeEnquiryModal = () => {
-    enquiryModal.hidden = true;
+    enquiryModal.classList.add("hidden");
   };
 
   enquiryForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    if (!emailInput.checkValidity()) {
-      emailInput.reportValidity();
-      return;
-    }
-
-    // textContent keeps the email safe to display in the modal.
-    modalEmail.textContent = emailInput.value.trim();
-    enquiryModal.hidden = false;
-    closeModalButton.focus();
+    enquiryModal.classList.remove("hidden");
   });
 
   closeModalButton.addEventListener("click", closeEnquiryModal);
 
-  enquiryModal.addEventListener("click", (event) => {
-    if (event.target === enquiryModal) {
-      closeEnquiryModal();
-    }
-  });
+  // enquiryModal.addEventListener("click", (event) => {
+  //   if (event.target === enquiryModal) {
+  //     closeEnquiryModal();
+  //   }
+  // });
 
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !enquiryModal.hidden) {
-      closeEnquiryModal();
-    }
-  });
+  // document.addEventListener("keydown", (event) => {
+  //   if (event.key === "Escape" && !enquiryModal.classList.contains("hidden")) {
+  //     closeEnquiryModal();
+  //   }
+  // });
 }
