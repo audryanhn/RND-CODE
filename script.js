@@ -334,11 +334,11 @@ if (tableHead !== null && tableBody !== null) {
 // ============== End of Table New Way =================
 
 // ===== Contact form: front-end confirmation example =====
-const enquiryForm = document.querySelector("#enquiry-form");
-
-if (enquiryForm !== null) {
+const isContact = document.querySelector("#contact-page");
+if (isContact !== null) {
   const enquiryModal = document.querySelector("#enquiry-modal");
   const closeModalButton = document.querySelector("#enquiry-modal-close");
+  const enquiryForm = document.querySelector("#enquiry-form");
 
   const closeEnquiryModal = () => {
     enquiryModal.classList.add("hidden");
