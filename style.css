@@ -527,6 +527,7 @@ body {
 .room-table tr:nth-child(even) {
   background-color: var(--gold-light);
 }
+
 /* ============== End of Table New Way ================= */
 
 /* EXPERIENCE */
@@ -1183,90 +1184,12 @@ div.exp-img-label {
   font-weight: 300;
 }
 
-.contact-right {
-  background: var(--bg);
-  padding: 70px 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contact-right h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: var(--ink);
-  margin-bottom: 2rem;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.form-group {
-  margin-bottom: 1rem;
-}
-
-.form-group label {
-  display: block;
-  font-size: 0.7rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 8px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 12px 0;
-  border: none;
-  border-bottom: 1px solid var(--border);
-  background: transparent;
-  font-family: "Jost", sans-serif;
-  font-size: 0.9rem;
-  color: var(--text);
-  outline: none;
-  transition: border 0.2s;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: var(--gold);
-}
-
-.form-group textarea {
-  resize: none;
-  min-height: 100px;
-}
-
-.form-submit {
-  background: var(--ink);
-  color: #fff;
-  border: none;
-  padding: 14px 36px;
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-family: "Jost", sans-serif;
-  transition: background 0.2s;
-  margin-top: 0.5rem;
-}
-
-.form-submit:hover {
-  background: var(--gold);
-}
 
 /* Simple confirmation modal used by the contact form. */
 .enquiry-modal.hidden {
   display: none;
 }
+
 /* .enquiry-modal[hidden] {
   display: none;
 } */
@@ -1305,7 +1228,7 @@ div.exp-img-label {
   font-weight: 500;
 }
 
-.enquiry-modal__content > p:not(.enquiry-modal__eyebrow) {
+.enquiry-modal__content>p:not(.enquiry-modal__eyebrow) {
   margin-bottom: 24px;
   color: var(--text);
   font-size: 16px;
@@ -1633,11 +1556,9 @@ nav {
   position: absolute;
   inset: 0;
   opacity: 0.12;
-  background-image: radial-gradient(
-    circle at 2px 2px,
-    white 1px,
-    transparent 0
-  );
+  background-image: radial-gradient(circle at 2px 2px,
+      white 1px,
+      transparent 0);
   background-size: 20px 20px;
 }
 
@@ -2184,7 +2105,7 @@ nav {
   background: var(--navy);
 }
 
-.detail-hero > img {
+.detail-hero>img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -2292,7 +2213,7 @@ nav {
   line-height: 1.08;
 }
 
-.detail-copy > p:last-of-type {
+.detail-copy>p:last-of-type {
   max-width: 690px;
   margin-top: 1.5rem;
   color: var(--muted);
@@ -2415,7 +2336,7 @@ nav {
   margin-bottom: 3rem;
 }
 
-.detail-section-heading > p {
+.detail-section-heading>p {
   max-width: 280px;
   padding-bottom: 0.5rem;
   color: var(--muted);
@@ -2551,7 +2472,7 @@ nav {
     display: block;
   }
 
-  .detail-section-heading > p {
+  .detail-section-heading>p {
     margin-top: 1rem;
   }
 
@@ -2571,7 +2492,7 @@ nav {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .detail-hero > img {
+  .detail-hero>img {
     animation: none;
   }
 }
