@@ -1183,6 +1183,8 @@ div.exp-img-label {
   font-weight: 300;
 }
 
+/* ============== Start of old form ================= */
+
 .contact-right {
   background: var(--bg);
   padding: 70px 5%;
@@ -1262,6 +1264,42 @@ div.exp-img-label {
 .form-submit:hover {
   background: var(--gold);
 }
+
+/* ============== End of old form ================= */
+
+/* ============== Start of New Form ================= */
+.form-container {
+  padding: 40px;
+}
+
+.form-container h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 32px;
+}
+
+.form-container label {
+  margin-top: 20px;
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  font-size: 14px;
+  color: var(--text);
+  outline: none;
+}
+/* ============== End of New Form ================= */
 
 /* Simple confirmation modal used by the contact form. */
 .enquiry-modal.hidden {

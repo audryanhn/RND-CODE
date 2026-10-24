@@ -70,61 +70,24 @@
             </div>
           </div>
         </div>
-        <div class="contact-right">
-          <h3>Reservation Enquiry</h3>
-          <form
-            id="enquiry-form"
-            action="https://formsubmit.co/67c5abc30493bff8e935a810f7d56c6c"
-            method="POST"
-          >
-            <div class="form-row">
-              <div class="form-group">
-                <label>First Name</label
-                ><input type="text" placeholder="John" name="name" />
-              </div>
-              <div class="form-group">
-                <label>Last Name</label
-                ><input type="text" placeholder="Smith" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Email Address</label
-              ><input
-                id="enquiry-email"
-                type="email"
-                placeholder="john@email.com"
-                required
-                name="email"
-              />
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label>Check-in Date</label
-                ><input type="date" name="check-in-date" />
-              </div>
-              <div class="form-group">
-                <label>Check-out Date</label
-                ><input type="date" name="check-out-date" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Room Type</label
-              ><select name="Room-Type">
-                <option>Deluxe City View</option>
-                <option>Executive Suite</option>
-                <option>Presidential Suite</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Special Requests</label
-              ><textarea
-                name="special_request"
-                placeholder="Let us know how we can make your stay extraordinary..."
-              ></textarea>
-            </div>
-            <input type="hidden" name="_captcha" value="false" />
-            <!-- <input type="hidden" name="_next" class="next" /> -->
-            <button class="form-submit" type="submit">Send Enquiry</button>
+
+        <div class="form-container">
+          <h2>Reservation Enquiry</h2>
+          <form action="">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+            />
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@email.com"
+            />
           </form>
         </div>
       </div>
