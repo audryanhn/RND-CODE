@@ -527,6 +527,7 @@ body {
 .room-table tr:nth-child(even) {
   background-color: var(--gold-light);
 }
+
 /* ============== End of Table New Way ================= */
 
 /* EXPERIENCE */
@@ -1305,6 +1306,7 @@ div.exp-img-label {
 .enquiry-modal.hidden {
   display: none;
 }
+
 /* .enquiry-modal[hidden] {
   display: none;
 } */
