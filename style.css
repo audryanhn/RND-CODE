@@ -1304,6 +1304,12 @@ div.exp-img-label {
   font-family: "Jost", sans-serif;
 }
 
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+  border-color: var(--gold);
+}
+
 .date-input {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
