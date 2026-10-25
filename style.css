@@ -1314,6 +1314,23 @@ div.exp-img-label {
   grid-row: 2;
 }
 
+.form-button {
+  margin-top: 8px;
+  padding: 14px 36px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: "Jost", sans-serif;
+  color: #fff;
+  background: var(--ink);
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background: var(--gold);
+}
+
 /* ============== End of New Form ================= */
 
 /* Simple confirmation modal used by the contact form. */
