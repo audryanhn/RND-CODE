@@ -1118,12 +1118,13 @@ div.exp-img-label {
 /* ===== CONTACT PAGE ===== */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
 }
 
 .contact-left {
   background: var(--dark);
-  padding: 70px 5%;
+  padding: 72px 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1270,7 +1271,7 @@ div.exp-img-label {
 
 /* ============== Start of New Form ================= */
 .form-container {
-  padding: 40px;
+  padding: 84px 40px;
 }
 
 .form-container h2 {
