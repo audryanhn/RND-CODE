@@ -1341,15 +1341,11 @@ div.exp-img-label {
 /* ============== End of New Form ================= */
 
 /* Simple confirmation modal used by the contact form. */
-.enquiry-modal.hidden {
+.modal.hidden {
   display: none;
 }
 
-/* .enquiry-modal[hidden] {
-  display: none;
-} */
-
-.enquiry-modal {
+.modal {
   position: fixed;
   inset: 0;
   z-index: 1000;
@@ -1359,7 +1355,7 @@ div.exp-img-label {
   background: rgba(21, 27, 37, 0.72);
 }
 
-.enquiry-modal-content {
+.modal-content {
   width: min(100%, 440px);
   padding: 40px;
   background: var(--bg);
@@ -1367,7 +1363,7 @@ div.exp-img-label {
   text-align: center;
 }
 
-.enquiry-modal-eyebrow {
+.modal-eyebrow {
   margin: 0 0 12px;
   color: var(--gold);
   font-size: 16px;
@@ -1375,7 +1371,7 @@ div.exp-img-label {
   text-transform: uppercase;
 }
 
-.enquiry-modal h3 {
+.modal h3 {
   margin-bottom: 12px;
   color: var(--ink);
   font-family: "Cormorant Garamond", serif;
@@ -1383,7 +1379,7 @@ div.exp-img-label {
   font-weight: 500;
 }
 
-.enquiry-modal__content > p:not(.enquiry-modal__eyebrow) {
+.modal__content > p:not(.modal__eyebrow) {
   margin-bottom: 24px;
   color: var(--text);
   font-size: 16px;

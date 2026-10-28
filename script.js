@@ -336,9 +336,9 @@ if (tableHead !== null && tableBody !== null) {
 // ===== Contact form: front-end confirmation example =====
 const isContact = document.querySelector("#contact-page");
 if (isContact !== null) {
-  const enquiryModal = document.querySelector("#enquiry-modal");
-  const closeModalButton = document.querySelector("#enquiry-modal-close");
-  const enquiryForm = document.querySelector("#enquiry-form");
+  const enquiryModal = document.querySelector("#modal");
+  const closeModalButton = document.querySelector("#modal-close");
+  const enquiryForm = document.querySelector("form");
 
   const closeEnquiryModal = () => {
     enquiryModal.classList.add("hidden");
@@ -349,16 +349,4 @@ if (isContact !== null) {
   });
 
   closeModalButton.addEventListener("click", closeEnquiryModal);
-
-  // enquiryModal.addEventListener("click", (event) => {
-  //   if (event.target === enquiryModal) {
-  //     closeEnquiryModal();
-  //   }
-  // });
-
-  // document.addEventListener("keydown", (event) => {
-  //   if (event.key === "Escape" && !enquiryModal.classList.contains("hidden")) {
-  //     closeEnquiryModal();
-  //   }
-  // });
 }
