@@ -1353,7 +1353,8 @@ div.exp-img-label {
   right: 0;
   z-index: 1000;
   display: grid;
-  place-items: center;
+  justify-items: center;
+  align-items: center;
   padding: 24px;
   background: rgba(21, 27, 37, 0.72);
 }
