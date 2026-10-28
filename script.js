@@ -336,16 +336,16 @@ if (tableHead !== null && tableBody !== null) {
 // ===== Contact form: front-end confirmation example =====
 const isContact = document.querySelector("#contact-page");
 if (isContact !== null) {
-  const enquiryModal = document.querySelector("#modal");
+  const modalOverlay = document.querySelector("#modal-overlay");
   const closeModalButton = document.querySelector("#modal-close");
   const enquiryForm = document.querySelector("form");
 
   const closeEnquiryModal = () => {
-    enquiryModal.classList.add("hidden");
+    modalOverlay.classList.add("hidden");
   };
 
   enquiryForm.addEventListener("submit", (event) => {
-    enquiryModal.classList.remove("hidden");
+    modalOverlay.classList.remove("hidden");
   });
 
   closeModalButton.addEventListener("click", closeEnquiryModal);
