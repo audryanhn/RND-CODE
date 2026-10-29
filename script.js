@@ -336,17 +336,20 @@ if (tableHead !== null && tableBody !== null) {
 // ===== Contact form: front-end confirmation example =====
 const isContact = document.querySelector("#contact-page");
 if (isContact !== null) {
+  console.log("Contact Page"); // Delete this code
   const modalOverlay = document.querySelector("#modal-overlay");
   const closeModalButton = document.querySelector("#modal-close");
   const enquiryForm = document.querySelector("form");
 
-  const closeEnquiryModal = () => {
-    modalOverlay.classList.add("hidden");
-  };
+  // const closeEnquiryModal = () => {
+  //   modalOverlay.classList.add("hidden");
+  // };
 
   enquiryForm.addEventListener("submit", (event) => {
     modalOverlay.classList.remove("hidden");
   });
 
-  closeModalButton.addEventListener("click", closeEnquiryModal);
+  closeModalButton.addEventListener("click", () => {
+    modalOverlay.classList.add("hidden");
+  });
 }
