@@ -73,18 +73,7 @@
 
         <div class="form-container">
           <h2>Reservation Enquiry</h2>
-          <iframe name="submit-response" hidden></iframe>
-          <form
-            action="https://api.web3forms.com/submit"
-            name="contact"
-            method="POST"
-            target="submit-response"
-          >
-            <input
-              type="hidden"
-              name="access_key"
-              value="5ebca57c-9a9c-4ddd-aab3-9b60d44c2ec1"
-            />
+          <form action="" netlify name="contact" target="netlify-response">
             <label for="name">Name</label>
             <input
               type="text"
@@ -122,6 +111,7 @@
             <button type="Submit" class="form-button">Send Enquiry</button>
           </form>
         </div>
+        <iframe name="netlify-response" id="netlify-response" hidden></iframe>
       </div>
 
       <!-- Simple confirmation modal for this front-end example. -->
